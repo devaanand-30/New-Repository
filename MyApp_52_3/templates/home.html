@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devaanand Profile</title>
+    <style>
+        /* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Center container styling */
+        .container {
+            max-width: 900px;
+            margin: 60px 20px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 3em;
+            color: #f4f4f4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #00ffdd;
+            margin-top: 20px;
+            border-bottom: 2px solid #00ffdd;
+            padding-bottom: 5px;
+        }
+
+        /* Section and List Styling */
+        p, ul {
+            margin: 15px 0;
+            font-size: 1.1em;
+            color: #dfe6e9;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            background: #0984e3;
+            margin: 5px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        li::before {
+            content: "✔️";
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #00ffdd;
+        }
+
+        /* Button styling */
+        .button {
+            display: block;
+            max-width: 220px;
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 1.1em;
+            color: #ffffff;
+            text-align: center;
+            background-color: #ff7f50;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e74c3c;
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #b2bec3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Header -->
+        <h1>{{ Devaanand }}</h1>
+        <p1>{{name}}</p1>
+        
+        <h1>{{ Devaanand }}</h1>
+        <p style="text-align:center"><strong>Email:</strong> <a href="mailto:{{ email }}" style="color: #00ffdd; text-decoration: none;">{{ email }}</a></p>
+
+        <!-- Education Section -->
+        <h2>Education</h2>
+        <p>{{ education }}</p>
+
+        <!-- Skills Section -->
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Experience Section -->
+        <h2>Experience</h2>
+        <p>{{ Fresher }}</p>
+
+        <!-- Hobbies Section -->
+        <h2>Hobbies</h2>
+        <ul>
+            {% for hobby in hobbies %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- GitHub Button -->
+        <a href="https://github.com/devaanand-30" target="_blank" class="button">Visit GitHub Profile</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; {{ name }} | All Rights Reserved
+    </footer>
+</body>
+</html>
